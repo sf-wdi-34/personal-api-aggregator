@@ -78,8 +78,10 @@ $(document).ready(function(){
   template = Handlebars.compile(source);
 
   students.forEach(function(student){
-    var address = student.personalApiHerokuApp;
-    pingPersonalApi(address + '/profile');
+    if(student.personalApiHerokuApp){
+      var address = student.personalApiHerokuApp;
+      pingPersonalApi(address + '/profile');
+    }
   })
 
 
