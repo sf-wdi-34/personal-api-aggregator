@@ -21,9 +21,24 @@
     <div class="container">
       <div class="row">
         <div class="col-md-8 col-md-offset-2">
-          <h1>Under Construction</h1>
-          <h4><a href="/api">Read My API Documentation</a></h4>
+          <div class="col-md-8 col-md-offset-2">
+          <h1>WDI 31's Personal APIs</h1>
+
         </div>
+      </div>
+      <div class="data-container row">
+
+        <script id="developer-data-template" type="text/x-handlebars-template">
+          {{#each profiles}}
+            <div class="col-md-6">
+              <h1>{{name}}</h1>
+              <img src="{{personalApiData.githubProfileImage}}" alt="">
+              <p>
+                {{personalApiData.githubUsername}} <a href="{{personalSiteLink}}">Website</a> <a href="{{githubLink}}">GitHub</a>
+              </p>
+              </div>
+          {{/each}}
+        </script>
       </div>
     </div>
   </body>
