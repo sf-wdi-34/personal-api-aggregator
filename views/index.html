@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Blank</title>
+    <title>API Aggregator</title>
 
     <!-- STYLESHEETS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -30,12 +30,16 @@
 
         <script id="developer-data-template" type="text/x-handlebars-template">
           {{#each profiles}}
-            <div class="col-md-6">
+            <div class="col-md-3 personal-data">
               <h1>{{name}}</h1>
               <img src="{{personalApiData.githubProfileImage}}" alt="">
-              <p>
-                {{personalApiData.githubUsername}} <a href="{{personalApiData.personalSiteLink}}">Website</a> <a href="{{personalApiData.githubLink}}">GitHub</a>
-              </p>
+              <h4>
+                <a href="{{personalApiData.personalSiteLink}}">Website</a>
+              </h4>
+              <h4>
+                <a href="{{personalApiData.githubLink}}">GitHub</a>
+              </h4>
+
               </div>
           {{/each}}
         </script>
